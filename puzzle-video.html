@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Jigsaw Puzzle Challenge</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f0f0f0;
+      margin: 0;
+      padding: 20px;
+    }
+    iframe.puzzle {
+      width: 100%;
+      max-width: 800px;
+      height: 600px;
+      border: none;
+      margin-top: 20px;
+    }
+    button {
+      margin-top: 30px;
+      padding: 15px 25px;
+      font-size: 18px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #videoContainer {
+      display: none;
+      margin-top: 40px;
+    }
+    iframe.video {
+      width: 90%;
+      max-width: 720px;
+      height: 405px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Solve the Puzzle to Unlock the Surprise!</h1>
+  
+  <iframe class="puzzle" src="https://www.jigsawplanet.com/?rc=play&pid=2442191dabf6" allowfullscreen></iframe>
+  
+  <button onclick="revealVideo()">I’ve finished the puzzle — show me the video!</button>
+
+  <div id="videoContainer">
+    <h2>Congratulations!</h2>
+    <p>Here’s your special video:</p>
+    <iframe class="video" src="https://www.youtube.com/embed/30kz0xykdTI?si=Nn5AKzkShoAdSWPF" allowfullscreen></iframe>
+  </div>
+
+  <script>
+    function revealVideo() {
+      document.getElementById('videoContainer').style.display = 'block';
+      window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
